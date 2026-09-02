@@ -1,0 +1,943 @@
+{
+  "format": "skills-factory-public/v1",
+  "packages": [
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Design or evolve a consumer-facing contract by defining its boundary, semantics, failures, compatibility promise, lifecycle, and verification evidence without assuming a language or transport.",
+      "license": "MIT",
+      "name": "api-design",
+      "path": "common/api-design"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "risk-management"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "documentation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Decide, plan, execute, or verify the safe retirement of an API, feature, data shape, dependency, or system while moving consumers to an accepted replacement.",
+      "license": "MIT",
+      "name": "deprecation-and-migration",
+      "path": "common/deprecation-and-migration"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "documentation"
+        }
+      ],
+      "description": "Establish and maintain project-specific domain language in hierarchical GLOSSARY.md files while detecting ambiguities and durable decisions during collaborative work.",
+      "license": "MIT",
+      "name": "domain-modeling",
+      "path": "common/domain-modeling"
+    },
+    {
+      "calls": [],
+      "description": "Prepare a compact, evidence-backed transfer when ongoing work must move to another person, agent, session, repository, or parallel workstream without access to the original context.",
+      "license": "MIT",
+      "name": "handoff",
+      "path": "common/handoff"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Expand, challenge, and refine a product, process, or technical idea into a chosen direction with explicit value, assumptions, tradeoffs, validation needs, and non-goals.",
+      "license": "MIT",
+      "name": "idea-refine",
+      "path": "common/idea-refine"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Clarify an unclear request through focused questions, explicit assumptions, reformulation, and user confirmation.",
+      "license": "MIT",
+      "name": "interview-me",
+      "path": "common/interview-me"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Design or improve operational signals when a system's behavior, health, failures, or user impact must be understood from outside, with explicit semantics, correlation, cost, privacy, alerting, and verification.",
+      "license": "MIT",
+      "name": "observability",
+      "path": "common/observability"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Design or resolve a product experience by connecting user and product outcomes, flows, alternatives, interactions, states, evidence, and trade-offs into a testable direction before implementation.",
+      "license": "MIT",
+      "name": "product-design",
+      "path": "common/product-design"
+    },
+    {
+      "calls": [],
+      "description": "Establish or control a project across software, product, design, operational, or other domains by integrating outcomes, scope, governance, milestones, capacity and cost, risks, stakeholders, decisions, changes, and forecasts.",
+      "license": "MIT",
+      "name": "project-management",
+      "path": "common/project-management"
+    },
+    {
+      "calls": [],
+      "description": "Identify, analyze, treat, monitor, and communicate uncertainty that could affect objectives across projects, products, operations, or other domains, including both threats and opportunities.",
+      "license": "MIT",
+      "name": "risk-management",
+      "path": "common/project-management/risk-management"
+    },
+    {
+      "calls": [],
+      "description": "Create, assess, or maintain an outcome-oriented roadmap that connects a vision to prioritized horizons, learning, dependencies, uncertainty, and explicit choices without turning it into a backlog or false delivery commitment.",
+      "license": "MIT",
+      "name": "roadmap",
+      "path": "common/project-management/roadmap"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Reshape existing code without intentionally changing its observable behavior by clarifying ownership, removing duplication and obsolete paths, reducing accidental complexity, and verifying consumers across the migration.",
+      "license": "MIT",
+      "name": "refactoring",
+      "path": "common/refactoring"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "risk-management"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "observability"
+        }
+      ],
+      "description": "Prepare, authorize, stage, observe, roll back, and close a production release using explicit readiness evidence, decision thresholds, and operational ownership.",
+      "license": "MIT",
+      "name": "release-management",
+      "path": "common/release-management"
+    },
+    {
+      "calls": [],
+      "description": "Investigate a factual or technical question using claim-appropriate sources, version and freshness checks, contradiction analysis, traceable citations, explicit inferences, and bounded stopping criteria.",
+      "license": "MIT",
+      "name": "research",
+      "path": "common/research"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Assess or harden a system, design, or change by modeling threats, tracing trust boundaries, qualifying exploitable risk, selecting proportionate controls, and verifying residual exposure without assuming a technology.",
+      "license": "MIT",
+      "name": "security",
+      "path": "common/security"
+    },
+    {
+      "calls": [],
+      "description": "Evaluate journeys, navigation, discoverability, feedback, errors, friction, cognitive load, and task completion.",
+      "license": "MIT",
+      "name": "ux-audit",
+      "path": "common/ux-audit"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "research"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "shadcn"
+        }
+      ],
+      "description": "Discover, qualify, compare, and shortlist current official or community shadcn/ui registries, components, blocks, themes, extensions, examples, and adjacent tools without installing them or treating popularity as proof of fit.",
+      "license": "MIT",
+      "name": "discover-shadcn",
+      "path": "discover/discover-shadcn"
+    },
+    {
+      "calls": [],
+      "description": "Evaluate, specify, or improve accessibility across user-facing software and content using an explicit standard, representative interaction modes, layered evidence, and clearly bounded conformance claims.",
+      "license": "MIT",
+      "name": "accessibility",
+      "path": "foundations/accessibility"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Diagnose defects by building a discriminating signal, reproducing or capturing the symptom, testing causal hypotheses, and proving the root cause. Calls implementation only when an authorized fix is applied.",
+      "license": "MIT",
+      "name": "debugging",
+      "path": "foundations/debugging"
+    },
+    {
+      "calls": [],
+      "description": "Create and maintain durable documentation for behavior, decisions, constraints, interfaces, and operational knowledge.",
+      "license": "MIT",
+      "name": "documentation",
+      "path": "foundations/documentation"
+    },
+    {
+      "calls": [],
+      "description": "Apply a bounded repository change safely by inspecting context, preserving scope and existing work, validating proportionately, and accounting for the final diff.",
+      "license": "MIT",
+      "name": "implementation",
+      "path": "foundations/implementation"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "implementation"
+        }
+      ],
+      "description": "Deliver a complete feature across affected flows, states, consumers, integration surfaces, and acceptance evidence. Always call implementation for the shared mutation contract.",
+      "license": "MIT",
+      "name": "feature-implementation",
+      "path": "foundations/implementation/feature-implementation"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "implementation"
+        }
+      ],
+      "description": "Execute an existing specification with requirement traceability, controlled deviations, dependency-aware progress, and closure evidence. Always call implementation for the shared mutation contract.",
+      "license": "MIT",
+      "name": "spec-implementation",
+      "path": "foundations/implementation/spec-implementation"
+    },
+    {
+      "calls": [],
+      "description": "Diagnose, improve, or guard performance with representative workloads, reproducible measurements, bottleneck evidence, budgets, and regression checks.",
+      "license": "MIT",
+      "name": "performance",
+      "path": "foundations/performance"
+    },
+    {
+      "calls": [],
+      "description": "Turn a sufficiently defined objective or specification into an ordered, dependency-aware, risk-conscious execution plan with verifiable tasks and checkpoints.",
+      "license": "MIT",
+      "name": "planning",
+      "path": "foundations/planning"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Review code, diffs, or completed changes with a technology-neutral method for scope, evidence, findings, prioritization, and reporting. Use for code review, implementation critique, regression-risk analysis, or a final quality pass; add technology-specific guidance separately when useful.",
+      "license": "MIT",
+      "name": "review",
+      "path": "foundations/review"
+    },
+    {
+      "calls": [],
+      "description": "Compare two visual captures against an intended target, using aligned evidence and optional image metrics to locate meaningful differences without assuming that either capture is correct.",
+      "license": "MIT",
+      "name": "compare-screenshots",
+      "path": "foundations/review/visual-review/compare-screenshots"
+    },
+    {
+      "calls": [],
+      "description": "Present a small, ordered set of visual artifacts for human inspection using the available image viewer, with clear captions and without altering unrelated user windows or files.",
+      "license": "MIT",
+      "name": "preview-shots",
+      "path": "foundations/review/visual-review/preview-shots"
+    },
+    {
+      "calls": [],
+      "description": "Critique screenshots with a deliberately fresh visual inspection that identifies concrete presentation defects, confidence, affected regions, and missing evidence without being primed by implementation history.",
+      "license": "MIT",
+      "name": "screenshot-critique",
+      "path": "foundations/review/visual-review/screenshot-critique"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Define a durable, implementation-neutral contract for a product or system change through scope, behaviors, rules, constraints, non-goals, acceptance evidence, and unresolved decisions.",
+      "license": "MIT",
+      "name": "specification",
+      "path": "foundations/specification"
+    },
+    {
+      "calls": [],
+      "description": "Design useful behavioral tests with clear contracts, deterministic signals, regression value, and appropriate scope.",
+      "license": "MIT",
+      "name": "testing",
+      "path": "foundations/testing"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "testing"
+        },
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "implementation"
+        }
+      ],
+      "description": "Implement a feature or bug fix test-first through small red-green-cleanup cycles when the user explicitly requests TDD or red-green-refactor evidence.",
+      "license": "MIT",
+      "name": "test-driven-development",
+      "path": "foundations/testing/test-driven-development"
+    },
+    {
+      "calls": [],
+      "description": "Define or evolve cross-technology design-system structure, reusable component and pattern contracts, runtime alignment, and governance; use when work spans system layers or decides what belongs in the shared system.",
+      "license": "MIT",
+      "name": "design-system",
+      "path": "technologies/design-system"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Evaluate or improve design-system tokens and components for reusable accessibility semantics, keyboard and focus behavior, states, themes, consumer guidance, and regression resistance across supported platforms.",
+      "license": "MIT",
+      "name": "design-system-accessibility",
+      "path": "technologies/design-system/design-system-accessibility"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Build and package design-system tokens, styles, components, icons, assets, and multi-platform artifacts while preserving source ownership, transforms, public APIs, versioning, and consumer contracts.",
+      "license": "MIT",
+      "name": "design-system-build",
+      "path": "technologies/design-system/design-system-build"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Define, review, or evolve reusable design-system component APIs; use for anatomy, composition, semantic slots, variants and states, controlled or uncontrolled behavior, events, refs, polymorphism, styling escape hatches, accessibility responsibilities, or breaking migrations.",
+      "license": "MIT",
+      "name": "design-system-component-api",
+      "path": "technologies/design-system/design-system-component-api"
+    },
+    {
+      "calls": [],
+      "description": "Review cross-cutting design-system changes across token, component, documentation, governance, compatibility, migration, generated-artifact, and consumer layers.",
+      "license": "MIT",
+      "name": "design-system-review",
+      "path": "technologies/design-system/design-system-review"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "screenshot-critique"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "compare-screenshots"
+        }
+      ],
+      "description": "Review rendered design-system output for visual consistency, hierarchy, token application, variants, interaction states, themes, responsive behavior, and regressions using bounded visual evidence.",
+      "license": "MIT",
+      "name": "design-system-visual-review",
+      "path": "technologies/design-system/design-system-review/design-system-visual-review"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "design-system-build"
+        }
+      ],
+      "description": "Design, implement, run, or diagnose tests for design-system tokens, components, variants, states, themes, public contracts, generated artifacts, and representative consumers.",
+      "license": "MIT",
+      "name": "design-system-testing",
+      "path": "technologies/design-system/design-system-testing"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "design-system-build"
+        }
+      ],
+      "description": "Model, migrate, validate, or diagnose design-system tokens and themes; use for semantic taxonomies, DTCG formats, aliases, group extension, resolver sets and modifiers, modes, cross-platform values, or token compatibility.",
+      "license": "MIT",
+      "name": "design-system-tokens",
+      "path": "technologies/design-system/design-system-tokens"
+    },
+    {
+      "calls": [],
+      "description": "Apply Java language, runtime, API, compatibility, resource, concurrency, and ecosystem constraints when designing, implementing, debugging, or analyzing Java code. Use across Java versions and runtimes; preserve the project's actual target instead of assuming modern Java SE or a framework.",
+      "license": "MIT",
+      "name": "java",
+      "path": "technologies/java"
+    },
+    {
+      "calls": [],
+      "description": "Apply Java ME platform constraints when designing, implementing, debugging, or analyzing CLDC/MIDP software. Use for MIDlets, LCDUI or GameCanvas interfaces, RMS storage, GCF networking, optional JSRs, vendor APIs, constrained devices, or JAR/JAD compatibility; preserve the exact target profile instead of assuming Java SE.",
+      "license": "MIT",
+      "name": "java-me",
+      "path": "technologies/java-me"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Build, preverify, package, and inspect Java ME JAR and JAD artifacts under constrained toolchains.",
+      "license": "MIT",
+      "name": "java-me-build",
+      "path": "technologies/java-me/java-me-build"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "java-me-build"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "java-me-testing"
+        }
+      ],
+      "description": "Analyze Java ME performance under strict heap, CPU, allocation, rendering, storage, network, and device limits.",
+      "license": "MIT",
+      "name": "java-me-performance",
+      "path": "technologies/java-me/java-me-performance"
+    },
+    {
+      "calls": [],
+      "description": "Review Java ME changes for CLDC/MIDP compatibility, optional-API linkage, MIDlet lifecycle, bounded-memory, LCDUI, RMS, GCF, packaging, and device-specific defects. Use for a focused Java ME review or alongside broader Java and review guidance.",
+      "license": "MIT",
+      "name": "java-me-review",
+      "path": "technologies/java-me/java-me-review"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "java-me-build"
+        }
+      ],
+      "description": "Test Java ME behavior across target-compatible VMs, emulators, and physical devices, including MIDlet lifecycle, LCDUI/input, RMS, GCF, permissions, and exact-artifact compatibility.",
+      "license": "MIT",
+      "name": "java-me-testing",
+      "path": "technologies/java-me/java-me-testing"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Inspect, configure, build, or package Java projects while preserving their Maven, Gradle, or other build contracts, dependency ownership, toolchains, module boundaries, artifacts, and verification evidence.",
+      "license": "MIT",
+      "name": "java-build",
+      "path": "technologies/java/java-build"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "java-build"
+        }
+      ],
+      "description": "Analyze Java performance using JVM-aware measurements, allocation, garbage collection, threading, and profiling evidence.",
+      "license": "MIT",
+      "name": "java-performance",
+      "path": "technologies/java/java-performance"
+    },
+    {
+      "calls": [],
+      "description": "Review Java code for language, API, compatibility, type-contract, exception, resource, concurrency, and stream-specific defects. Use for a focused Java review or alongside a broader review method; judge every rule against the project's actual Java version and runtime.",
+      "license": "MIT",
+      "name": "java-review",
+      "path": "technologies/java/java-review"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "java-build"
+        }
+      ],
+      "description": "Design, implement, run, or diagnose Java tests using the project's actual JUnit Platform, JUnit, TestNG, Mockito, assertion, integration, module, and build-runner contracts without imposing a framework migration.",
+      "license": "MIT",
+      "name": "java-testing",
+      "path": "technologies/java/java-testing"
+    },
+    {
+      "calls": [],
+      "description": "Apply React component, state, rendering, composition, lifecycle, accessibility, and ecosystem constraints when designing, implementing, debugging, or analyzing React applications and libraries; preserve the installed React and framework contract.",
+      "license": "MIT",
+      "name": "react",
+      "path": "technologies/react"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "react-server-components"
+        }
+      ],
+      "description": "Design, implement, review, or diagnose React Action and form workflows; use for action props, useActionState, useOptimistic, useFormStatus, progressive enhancement, pending and error states, duplicate submissions, ordering, cancellation, or optimistic reconciliation.",
+      "license": "MIT",
+      "name": "react-actions-and-forms",
+      "path": "technologies/react/react-actions-and-forms"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Inspect, configure, build, or package React applications and component libraries while preserving their framework, bundler, JSX, module, dependency, asset, and consumer contracts.",
+      "license": "MIT",
+      "name": "react-build",
+      "path": "technologies/react/react-build"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "react-build"
+        }
+      ],
+      "description": "Analyze React rendering, scheduling, bundle, loading, interaction, and runtime performance with version-matched profiling and before-and-after evidence.",
+      "license": "MIT",
+      "name": "react-performance",
+      "path": "technologies/react/react-performance"
+    },
+    {
+      "calls": [],
+      "description": "Review React code for rendering, component API, state, Hook, effect, identity, accessibility, server-client, and maintainability defects against the project's installed version and framework.",
+      "license": "MIT",
+      "name": "react-review",
+      "path": "technologies/react/react-review"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "react-build"
+        }
+      ],
+      "description": "Design, implement, review, or diagnose React Server Component and Server Function features; use for server/client boundaries, directives, serialization, streaming, hydration, secure mutations, RSC dependency advisories, or framework integration.",
+      "license": "MIT",
+      "name": "react-server-components",
+      "path": "technologies/react/react-server-components"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "react-build"
+        }
+      ],
+      "description": "Design, implement, run, or diagnose React component and Hook tests through the project's actual renderer, runner, interaction, accessibility, scheduling, and integration contracts.",
+      "license": "MIT",
+      "name": "react-testing",
+      "path": "technologies/react/react-testing"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "tailwindcss"
+        }
+      ],
+      "description": "Use, add, compose, customize, update, review, or diagnose shadcn/ui components and projects from their local source, detected framework, style, base library, aliases, Tailwind major, registry provenance, and installed component APIs.",
+      "license": "MIT",
+      "name": "shadcn",
+      "path": "technologies/shadcn"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "shadcn"
+        },
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "tanstack-table"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Design, implement, review, migrate, or diagnose a shadcn/ui data table that integrates locally owned Table primitives with the installed TanStack Table major, including columns, state, server operations, selection, pagination, responsive rendering, accessibility, and feature-specific reuse.",
+      "license": "MIT",
+      "name": "shadcn-data-table",
+      "path": "technologies/shadcn/shadcn-data-table"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "shadcn"
+        }
+      ],
+      "description": "Design, author, validate, secure, version, publish, consume, or diagnose shadcn-compatible registries, registry indexes and items, namespaces, dependencies, target files, authentication, dynamic search, GitHub delivery, and MCP exposure.",
+      "license": "MIT",
+      "name": "shadcn-registry",
+      "path": "technologies/shadcn/shadcn-registry"
+    },
+    {
+      "calls": [],
+      "description": "Author or analyze portable Storybook component stories; use for Component Story Format, args, decorators, loaders, play interactions, deterministic mocks, state coverage, and renderer-neutral development workflows against the installed version.",
+      "license": "MIT",
+      "name": "storybook",
+      "path": "technologies/storybook"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Configure, build, upgrade, or diagnose Storybook development and static outputs while preserving framework, builder, addon, asset, environment, and deployment-artifact contracts.",
+      "license": "MIT",
+      "name": "storybook-build",
+      "path": "technologies/storybook/storybook-build"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "storybook-build"
+        }
+      ],
+      "description": "Author, configure, review, or diagnose Storybook documentation; use for Autodocs, MDX, Doc Blocks, docgen, source examples, component usage guidance, documentation builds, story manifests, or Storybook MCP context.",
+      "license": "MIT",
+      "name": "storybook-docs",
+      "path": "technologies/storybook/storybook-docs"
+    },
+    {
+      "calls": [],
+      "description": "Review Storybook stories and configuration for state coverage, isolation, determinism, args, decorators, documentation, interactions, portability, and maintainability against the installed version.",
+      "license": "MIT",
+      "name": "storybook-review",
+      "path": "technologies/storybook/storybook-review"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "storybook-build"
+        }
+      ],
+      "description": "Design, implement, run, or diagnose Storybook story tests, play interactions, accessibility checks, portable-story reuse, and browser or CI execution against the installed Storybook toolchain.",
+      "license": "MIT",
+      "name": "storybook-testing",
+      "path": "technologies/storybook/storybook-testing"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "storybook-build"
+        }
+      ],
+      "description": "Configure, design, run, or diagnose visual regression testing for Storybook stories; use for capture coverage, deterministic rendering, viewports, themes, browsers, baselines, pixel-diff triage, approvals, flaky snapshots, or visual-test CI policy.",
+      "license": "MIT",
+      "name": "storybook-visual-testing",
+      "path": "technologies/storybook/storybook-visual-testing"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "tailwindcss-build"
+        }
+      ],
+      "description": "Design, implement, review, or diagnose Tailwind CSS utility styling, theme variables, variants, responsive behavior, class composition, custom CSS, and source-detection-safe class usage while preserving the installed major and project design contract.",
+      "license": "MIT",
+      "name": "tailwindcss",
+      "path": "technologies/tailwindcss"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Configure, migrate, build, or diagnose Tailwind CSS installation, CSS entrypoints, Vite, PostCSS or CLI integration, source detection, monorepo inputs, browser compatibility, and emitted production CSS for the installed major.",
+      "license": "MIT",
+      "name": "tailwindcss-build",
+      "path": "technologies/tailwindcss/tailwindcss-build"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Design, implement, review, migrate, or diagnose TanStack Table data grids across supported adapters, with version-matched columns, features, state, row models, client or server data operations, selection, pagination, virtualization boundaries, and headless rendering.",
+      "license": "MIT",
+      "name": "tanstack-table",
+      "path": "technologies/tanstack-table"
+    },
+    {
+      "calls": [
+        {
+          "included": false,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "validate-skill-system"
+        }
+      ],
+      "description": "Create or revise portable Agent Skills from real domain evidence. Use when defining a skill boundary, writing SKILL.md, improving discovery metadata, adapting source material, or deciding what belongs in instructions, references, scripts, or assets.",
+      "license": "MIT",
+      "name": "author-skill",
+      "path": "tooling/author-skill"
+    },
+    {
+      "calls": [
+        {
+          "included": false,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "validate-skill-system"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "author-skill"
+        }
+      ],
+      "description": "Evaluate an Agent Skill's routing, execution quality, reliability, composition, and incremental value with isolated realistic cases and evidence. Use when deciding readiness, investigating missed or false triggers, comparing skill versions, or hardening a skill after observed failures.",
+      "license": "MIT",
+      "name": "evaluate-skill",
+      "path": "tooling/evaluate-skill"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "domain-modeling"
+        }
+      ],
+      "description": "Configure a repository once for hierarchical domain glossaries by inspecting its package structure, confirming scopes, updating root AGENTS.md, and initializing every applicable GLOSSARY.md.",
+      "license": "MIT",
+      "name": "setup-domain-modeling",
+      "path": "tooling/setup-domain-modeling"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "research"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "author-skill"
+        }
+      ],
+      "description": "Assess an external or local Agent Skill, instruction file, repository, or reference for provenance, licensing, freshness, safety, quality, overlap, and reusable content. Use before deciding whether to keep, adapt, extract from, reference, archive, or reject source material.",
+      "license": "MIT",
+      "name": "source-skill",
+      "path": "tooling/source-skill"
+    }
+  ],
+  "warnings": [
+    "author-skill: conditional target not selected: validate-skill-system",
+    "evaluate-skill: conditional target not selected: validate-skill-system"
+  ]
+}
