@@ -12,9 +12,9 @@ Think of them as reusable pieces of expertise you can plug into an agent:
 
 ```text
 review
-+ java
-+ java-me
-+ java-me-review
++ react
++ react-review
++ accessibility
 ```
 
 instead of maintaining one enormous prompt that tries to know everything.
@@ -38,16 +38,17 @@ workflows I actually want to reuse.
 
 A few examples:
 
-| I want my agent to...                          | Start with                               |
-| ---------------------------------------------- | ---------------------------------------- |
-| Turn a fuzzy request into something actionable | [`interview-me`](./common/interview-me/) |
-| Explore, challenge or refine an idea           | [`idea-refine`](./common/idea-refine/)   |
-| Review code systematically                     | [`review`](./foundations/review/)        |
-| Research a technical question                  | [`research`](./common/research/)         |
-| Explore the shadcn ecosystem before adopting   | [`discover-shadcn`](./discover/discover-shadcn/) |
-| Prepare work for another agent or session      | [`handoff`](./common/handoff/)           |
-| Understand Java-specific constraints           | [`java`](./technologies/java/)           |
-| Work safely on Java ME / CLDC / MIDP code      | [`java-me`](./technologies/java-me/)     |
+| I want my agent to...                          | Start with                                         |
+| ---------------------------------------------- | -------------------------------------------------- |
+| Turn a fuzzy request into something actionable | [`interview-me`](./common/interview-me/)           |
+| Explore, challenge or refine an idea           | [`idea-refine`](./common/idea-refine/)             |
+| Review code systematically                     | [`review`](./foundations/review/)                  |
+| Build or review a React interface              | [`react`](./technologies/react/)                   |
+| Develop and verify component stories           | [`storybook`](./technologies/storybook/)           |
+| Explore the shadcn ecosystem before adopting   | [`discover-shadcn`](./discover/discover-shadcn/)   |
+| Prepare work for another agent or session      | [`handoff`](./common/handoff/)                     |
+| Understand Java-specific constraints           | [`java`](./technologies/java/)                     |
+| Work safely on Java ME / CLDC / MIDP code      | [`java-me`](./technologies/java-me/)               |
 
 Some skills work perfectly on their own.
 
@@ -88,7 +89,7 @@ implementing it.
 or:
 
 ```text
-Use review together with the Java skills to review this module.
+Use review together with react and react-review to review this component.
 ```
 
 ---
@@ -141,34 +142,41 @@ review
 knows **how to review software**.
 
 ```text
-java
+react
 ```
 
-knows **what changes when the software is Java**.
+knows **what changes when the software is React**.
 
 ```text
-java-me
+react-review
 ```
 
-adds the constraints of **CLDC / MIDP and constrained devices**.
+adds checks that are specifically useful when **reviewing React software**.
 
 ```text
-java-me-review
+storybook
 ```
 
-adds checks that are specifically useful when **reviewing Java ME software**.
+knows **how component stories should behave across renderers and projects**.
+
+```text
+storybook-review
+```
+
+adds another lens when the project uses **Storybook as a component workbench**.
 
 Together:
 
 ```text
 review
-+ java
-+ java-me
-+ java-me-review
++ react
++ react-review
++ storybook
++ storybook-review
 ```
 
-becomes a fairly specialized review agent without any of those skills having
-to own the entire workflow.
+becomes a focused review agent for a React component library without any of
+those skills having to own the entire workflow.
 
 That's the main idea behind this repository:
 
@@ -178,21 +186,47 @@ That's the main idea behind this repository:
 
 ## A few composition recipes
 
-### Review a project
+### Discover and build a React interface
 
 ```text
-review
-+ <technology>
-+ <technology>-review
+idea-refine
+→ product-design
+→ discover-shadcn
+→ react + shadcn + tailwindcss
+→ implementation
+→ react-testing
 ```
 
-Example:
+Use discovery when the component choice is still open. Once the direction is
+clear, the technology skills preserve the real React, shadcn/ui and Tailwind
+contracts while the foundation skills own safe implementation and testing.
+
+### Evolve a design system component
 
 ```text
-review
-+ java
-+ java-review
+product-design
+→ design-system
+→ design-system-component-api + design-system-accessibility
+→ implementation
+→ design-system-testing
 ```
+
+This keeps product intent, system-wide decisions, component API, accessibility
+and verification separate while still letting them shape the same change.
+
+### Build and verify a Storybook
+
+```text
+storybook
++ storybook-build
++ storybook-docs
++ storybook-testing
++ storybook-visual-testing
+```
+
+The base skill owns portable stories. The specialized skills add build,
+documentation, interaction-testing and visual-regression expertise without
+turning Storybook into one giant workflow.
 
 ### Review a constrained Java ME project
 
@@ -203,41 +237,9 @@ review
 + java-me-review
 ```
 
-Each layer adds something different:
-
-- `review` → review method
-- `java` → Java language and runtime guidance
-- `java-me` → CLDC/MIDP platform constraints
-- `java-me-review` → Java ME-specific review checks
-
-### Go from a vague idea to work another agent can execute
-
-```text
-interview-me
-→ idea-refine
-→ specification
-→ planning
-→ handoff
-```
-
-### Discover something before adopting it
-
-```text
-need
-→ discover-<subject>
-→ qualified choice
-→ <technology>
-→ implementation
-```
-
-Discovery skills are for fast-moving ecosystems where choosing the right
-component, registry or tool deserves a repeatable qualification workflow. They
-produce a small, evidence-backed shortlist and stop before installation.
-
-The `discover-<subject>` family lives separately from generic `research` and
-technology usage. Not every technology needs a matching discovery skill. The
-first published example is
-[`discover-shadcn`](./discover/discover-shadcn/).
+The same composition model still works for a much older and more constrained
+platform: the general review method stays reusable while Java, Java ME and the
+specialized review skill progressively narrow the rules.
 
 You don't have to use any of these exact chains.
 

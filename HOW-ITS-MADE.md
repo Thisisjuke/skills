@@ -20,18 +20,18 @@ This repository treats an agent as a composition of focused capabilities. A
 skill contributes one method, one body of expertise or one specialized lens;
 the agent combines those parts for a concrete job.
 
-A Java ME review agent is a useful example:
+A React review agent is a useful example:
 
 ```text
-review + java + java-me + java-me-review
+review + react + react-review + accessibility
 ```
 
 [`review`](./foundations/review/) supplies the technology-neutral review
-method. [`java`](./technologies/java/) adds language and runtime constraints.
-[`java-me`](./technologies/java-me/) narrows those constraints to CLDC/MIDP and
-real device capabilities. Finally,
-[`java-me-review`](./technologies/java-me/java-me-review/) adds defects and
-evidence specific to reviewing that platform.
+method. [`react`](./technologies/react/) adds component, rendering, state and
+lifecycle constraints. [`react-review`](./technologies/react/react-review/)
+adds React-specific defect patterns, while
+[`accessibility`](./foundations/accessibility/) adds an explicit accessibility
+standard and representative interaction modes.
 
 Each layer has a reason to exist, and none needs to pretend it owns the entire
 agent. The pattern also leaves room for extension: a missing ecosystem can add
@@ -47,8 +47,8 @@ and behavior when another capability is unavailable. Supporting
 package does not depend on undocumented repository context.
 
 Keeping responsibilities narrow makes a skill easier to understand, test,
-replace and combine. `review` does not quietly become Java guidance;
-`java-review` does not reinvent the complete review process. This deliberate
+replace and combine. `review` does not quietly become React guidance;
+`react-review` does not reinvent the complete review process. This deliberate
 overlap boundary is what makes both skills reusable rather than incomplete.
 
 “Unitary” does not mean isolated from every other skill. It means the package
@@ -66,11 +66,13 @@ pipeline:
   specification, planning, implementation, testing, debugging and review;
 - [`common/`](./common/) contains reusable product and engineering workflows
   such as interviewing, research, API design, security and handoff;
+- [`discover/`](./discover/) contains subject-specific workflows that qualify
+  a fast-moving ecosystem before anything is selected or installed;
 - [`technologies/`](./technologies/) contains language, platform and
   specialization layers, with nested skills for deeper build, testing,
   performance or review guidance;
-- [`tooling/`](./tooling/) contains the workflows used to source, author and
-  evaluate skills themselves.
+- [`tooling/`](./tooling/) contains workflows used to prepare repositories and
+  to source, author and evaluate skills themselves.
 
 This ordering answers two different questions: “What kind of capability am I
 adding?” at the top level, and “How specialized does it need to be?” as paths
@@ -78,10 +80,33 @@ become deeper. A predictable location and a machine-readable
 [`skills.json`](./skills.json) catalogue make discovery possible for both
 people and tools.
 
+The technology root follows real ecosystem boundaries rather than forcing
+everything into a single language hierarchy. It currently includes focused
+families for:
+
+- [`design-system`](./technologies/design-system/), including component APIs,
+  tokens, accessibility, build, testing and review concerns;
+- [`react`](./technologies/react/), including build, testing, performance,
+  review, actions/forms and server-component specializations;
+- [`shadcn`](./technologies/shadcn/), with focused data-table and registry
+  workflows that can compose with Tailwind CSS and TanStack Table;
+- [`storybook`](./technologies/storybook/), with build, documentation, testing,
+  review and visual-testing layers;
+- [`tailwindcss`](./technologies/tailwindcss/) and
+  [`tanstack-table`](./technologies/tanstack-table/) for their own project
+  contracts;
+- [`java`](./technologies/java/) and [`java-me`](./technologies/java-me/) for
+  language, runtime and constrained-device work.
+
+Discovery remains separate from those usage skills. For example,
+[`discover-shadcn`](./discover/discover-shadcn/) owns the search and
+qualification of current shadcn/ui options; once a choice is made,
+[`shadcn`](./technologies/shadcn/) owns using it safely in a real project.
+
 ## Composition is explicit, but it is not automatic magic
 
 The collection supports two forms of composition. A user can select
-independent layers for an agent, as in the Java ME review example. No metadata
+independent layers for an agent, as in the React review example. No metadata
 edge is required for that choice. Separately, a skill can delegate a defined
 part of its own workflow to another installed skill.
 
@@ -182,8 +207,8 @@ race, and each public commit records the factory revision that produced it.
 
 Installing a skill should not require understanding the factory. You can use
 the Skills CLI or copy one complete package directory. You can start with one
-focused workflow, then add foundations, technologies and specializations as
-your agent's job becomes more precise.
+focused workflow, then add foundations, discovery, technologies and
+specializations as your agent's job becomes more precise.
 
 The factory, manifest, generator and verification gate exist so that this
 simple usage rests on visible guarantees: clean packages, predictable
