@@ -91,6 +91,19 @@
           "target": "implementation"
         }
       ],
+      "description": "Analyze, navigate, change, or verify work in a repository containing multiple packages, modules, applications, services, or build units across languages and workspace tools while preserving boundaries, dependency and task graphs, scoped commands, shared configuration, and affected-consumer evidence.",
+      "license": "MIT",
+      "name": "monorepo",
+      "path": "common/monorepo"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
       "description": "Design or improve operational signals when a system's behavior, health, failures, or user impact must be understood from outside, with explicit semantics, correlation, cost, privacy, alerting, and verification.",
       "license": "MIT",
       "name": "observability",
@@ -872,6 +885,24 @@
       "license": "MIT",
       "name": "tanstack-table",
       "path": "technologies/tanstack-table"
+    },
+    {
+      "calls": [
+        {
+          "included": true,
+          "relation": "ALWAYS CALLS",
+          "target": "monorepo"
+        },
+        {
+          "included": true,
+          "relation": "CALLS WHEN NEEDED",
+          "target": "implementation"
+        }
+      ],
+      "description": "Configure, migrate, run, cache, or diagnose Vite+ in a multi-package or multi-application repository, including root and package configs, package targeting, workspace task graphs, filters, automatic data tracking, package-manager integration, and CI behavior.",
+      "license": "MIT",
+      "name": "vite-plus-monorepo",
+      "path": "technologies/vite-plus-monorepo"
     },
     {
       "calls": [
